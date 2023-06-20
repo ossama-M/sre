@@ -24,7 +24,7 @@ public class DeviceConfig {
 
     private Integer temperature ;
     @Audited
-    @Column(name ="pin_code",length = 7,columnDefinition = "number(7) NOT NULL")
+    @Column(name ="pin_code",length = 7,columnDefinition = "NUMERIC(7,0) NOT NULL")
     private Integer pinCode ;
     @Enumerated(EnumType.STRING)
     private DeviceStatus deviceStatus ;

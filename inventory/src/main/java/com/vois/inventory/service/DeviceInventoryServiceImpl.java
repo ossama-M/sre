@@ -29,17 +29,20 @@ public class DeviceInventoryServiceImpl implements DeviceConfigService,DeviceSer
     @Override
     public Integer getUnConfigDeviceCount() {
 
-        return configRepo.countDeviceConfigByDeviceStatus_Ready();
+        return configRepo.countDeviceConfigByDeviceStatus(DeviceStatus.READY);
+
     }
 
     @Override
     public Integer getConfigDeviceConfigCount() {
-        return configRepo.countDeviceConfigByDeviceStatus_Active();
+       return configRepo.countDeviceConfigByDeviceStatus(DeviceStatus.ACTIVE);
+
     }
 
     @Override
 
     public void sendNotificationToConfig() {
+
         DeviceList deviceList = (DeviceList) configClient.fireConfig();
         deviceList.getDevices().forEach(
                 deviceDto -> {
@@ -62,7 +65,7 @@ public class DeviceInventoryServiceImpl implements DeviceConfigService,DeviceSer
 
     @Override
     public DeviceList getConfigDevices() {
-        List<Device> devices = deviceRepo.getDeviceByDeviceConfig_DeviceStatus_Active();
+        List<Device> devices = deviceRepo.getDeviceByDeviceConfig_DeviceStatus(DeviceStatus.ACTIVE);
         DeviceList deviceList  = deviceListBuilder(devices);
         return deviceList;
     }
@@ -84,7 +87,7 @@ public class DeviceInventoryServiceImpl implements DeviceConfigService,DeviceSer
 
     @Override
     public DeviceList getUnConfigDevices() {
-        List<Device> devices = deviceRepo.getDeviceByDeviceConfig_DeviceStatus_Ready();
+        List<Device> devices = deviceRepo.getDeviceByDeviceConfig_DeviceStatus(DeviceStatus.READY);
         DeviceList deviceList  = deviceListBuilder(devices);
         return deviceList ;
     }

@@ -1,6 +1,6 @@
 services:
   postress:
-    container_name: postgres
+    container_name: postgres-vois
     image: postgres
     environment:
       POSTGRES_USER: ossama
@@ -15,7 +15,7 @@ services:
     restart: unless-stopped
 
   pgadmin:
-    container_name: pgadmin
+    container_name: pgadmin-vois
     image: dpage/pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
@@ -31,7 +31,7 @@ services:
 
   zipkin:
     image: openzipkin/zipkin
-    container_name: zipkin
+    container_name: zipkin-vois
     ports:
       - "9411:9411"
 
