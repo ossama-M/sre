@@ -60,6 +60,11 @@ public class Controller {
         return new Response(ResponseCodes.CONFIGURED_DEVICE_SAVED_TO_DB);
     }
 
+    @DeleteMapping("/delete-device/{deviceId}")
+    public @ResponseBody Response saveConfigDevicesToDB(@PathVariable Integer deviceId){
+
+        return deviceInventoryService.deleteDevice(deviceId) ;
+    }
 
 
 

@@ -136,7 +136,7 @@ public class DeviceInventoryServiceImpl implements DeviceConfigService,DeviceSer
     @Override
     public Response deleteDevice(Integer id) {
 
-         deviceRepo.deleteById(id);
+         deviceRepo.deleteDeviceBy(id);
          return new Response(ResponseCodes.DELETED);
     }
 
