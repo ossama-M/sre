@@ -1,8 +1,7 @@
-package com.vois.clients.inventoryClient.dto;
+package com.vois.clients.utils;
 
 
 import com.vois.clients.inventoryClient.dto.DeviceDto;
-import com.vois.clients.utils.Response;
 import lombok.*;
 
 import java.util.List;

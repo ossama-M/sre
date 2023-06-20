@@ -6,12 +6,13 @@ management:
   info:
     env:
       enabled: true
+
+
+spring:
   application:
     name: inventory
     description: vois
     author: Ossama Mohamed
-
-spring:
   profiles:
     active: prod
   jpa:

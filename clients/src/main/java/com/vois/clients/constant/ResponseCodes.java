@@ -17,8 +17,12 @@ public class ResponseCodes {
     public static final int DELETED = 203;
     @Value(Value = "PIN updated successfully")
     public static final int PIN_UPDATED = 204;
-    @Value(Value = "let's config some device ")
+    @Value(Value = "let's config some device ..... we send request to Configuration Service to start work .... ")
     public static final int WE_HAVE_DEVICE_TO_CONFIG =205 ;
+    @Value(Value = "device configured successfully and save into db ")
+    public static final int DEVICE_CONFIGURED_SUCCESSFULLY = 206;
+    @Value(Value = "configured devices  save into DB ")
+    public static final int CONFIGURED_DEVICE_SAVED_TO_DB =207 ;
     @Value(Value = "device id not exist")
     public static final int DEVICE_ID_NOT_EXIST = 301;
     @Value(Value = "pin must be consist of 7 digit only")
@@ -29,6 +33,7 @@ public class ResponseCodes {
     public static final String PIN_MUST_BE_DIGIT = "304";
     @Value(Value = "there is no device to config ")
     public static final int THERE_IS_NO_DEVICE_TO_CONFIG = 305 ;
+
 
 
     public static String getDesc(int constantValue) {

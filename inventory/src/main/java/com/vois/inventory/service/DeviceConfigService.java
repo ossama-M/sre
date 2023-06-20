@@ -1,6 +1,6 @@
 package com.vois.inventory.service;
 
-import com.vois.clients.inventoryClient.dto.DeviceList;
+import com.vois.clients.utils.DeviceList;
 import com.vois.inventory.dto.request.UpdatePinRequest;
 import com.vois.clients.utils.Response;
 
