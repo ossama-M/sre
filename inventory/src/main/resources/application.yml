@@ -1,0 +1,18 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    env:
+      enabled: true
+  application:
+    name: inventory
+    description: vois
+    author: Ossama Mohamed
+
+spring:
+  profiles:
+    active: prod
+  jpa:
+    show-sql: true
